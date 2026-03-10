@@ -209,7 +209,7 @@ jupyter notebook notebooks/sales_analysis.ipynb
 
 ## 👨‍💻 Author
 
-**Kassab** — AI Student & Data Analyst
+**Mohamed Kassab** — AI Student & Data Analyst
 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/Mohamed934789)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/mohamedkaasab/)
