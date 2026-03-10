@@ -1,6 +1,6 @@
 # 📊 Retail Sales & Revenue Analysis Dashboard
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red?style=flat&logo=microsoftsqlserver)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=flat&logo=powerbi)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=flat&logo=pandas)
