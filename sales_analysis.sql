@@ -1,5 +1,5 @@
 /*============================================================
-  SALES ANALYSIS PROJECT 
+  SALES ANALYSIS PROJECT
   Table: sales_table
 ============================================================*/
 
@@ -26,7 +26,8 @@ FROM sales_table;
 ============================================================*/
 
 -- Rename column Description -> Product (only run once if needed)
-EXEC sp_rename 'sales_table.Description', 'Product', 'column';
+IF COL_LENGTH('sales_table', 'Description') IS NOT NULL AND COL_LENGTH('sales_table', 'Product') IS NULL
+    EXEC sp_rename 'sales_table.Description', 'Product', 'column';
 
 
 /*============================================================
@@ -142,7 +143,8 @@ GROUP BY s.[Customer ID],m.Max_InvoiceDate
 ============================================================*/
 
 -- Monthly revenue per customer
-CREATE VIEW monthly_customer_revenue AS
+GO
+CREATE OR ALTER VIEW monthly_customer_revenue AS
 SELECT
     [Customer ID],
     [Year],
@@ -153,6 +155,7 @@ GROUP BY
     [Customer ID],
     [Year],
     [Month];
+GO
 
 -- Top 10 (highest monthly revenue records)
 SELECT TOP 10
@@ -239,13 +242,15 @@ WHERE Rank_In_Country <= 3;
 
 
 
-CREATE VIEW Married_Order AS
-SELECT 
+GO
+CREATE OR ALTER VIEW Married_Order AS
+SELECT
     sales_table.Invoice,
     COUNT(DISTINCT PRODUCT) AS n_distinct_products,
-    CASE 
+    CASE
         WHEN COUNT(DISTINCT PRODUCT) > 1 THEN 'Married'
         ELSE 'Single'
     END AS Order_Type
 FROM sales_table
 GROUP BY sales_table.Invoice;
+GO
